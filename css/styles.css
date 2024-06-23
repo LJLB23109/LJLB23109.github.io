@@ -1,0 +1,50 @@
+/* 设置全部元素的边框间距为0 */
+*{
+    /* margin: 0; */
+    padding: 0;
+}
+html{
+    background-color: rgb(0, 0, 0);
+}
+.headText{
+    width: auto;
+    height: 100vh;
+    font-size: 10vh;
+    color: #fff;
+    margin: 0px 100px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+h1{
+    position: relative;
+    z-index: 2; /* 确保canvas在文本下方 */
+}
+.justify-content-left{
+    justify-content: left;
+}
+.justify-content-right{
+    justify-content: right;
+}
+/* 隐藏滚动条的样式 */
+::-webkit-scrollbar {
+    display: none;
+}
+#container {
+    position: relative;
+}
+#threejsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* 确保用户交互在canvas下面的元素上 */
+}
+/* 设置对应标签的位置和模式 */
+.webgl{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 有些点击元素时会有外边框，设置外边框为none */
+    outline: none;
+    z-index: 1; /* 确保canvas在文本下方 */
+}
